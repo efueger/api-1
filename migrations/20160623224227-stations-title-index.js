@@ -32,12 +32,12 @@ function deleteIndex(database, connection) {
 
 function up(database, connection) {
   return createIndex(database, connection)
-    .catch(err => { throw new Error(err); });
+    .catch(console.log);
 }
 
 function down(database, connection) {
   return deleteIndex(database, connection)
-    .catch(err => { throw new Error(err); });
+    .catch(console.log);
 }
 
 module.exports.up   = up;
